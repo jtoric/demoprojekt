@@ -3,6 +3,7 @@ const menuCards = document.querySelectorAll(".menu-card");
 const recipeToggle = document.querySelector("[data-toggle-recipe]");
 const recipeDetails = document.querySelector(".toggle-area");
 const reservationForm = document.querySelector("#reservation-form");
+const formMessage = document.querySelector("#form-message");
 const menuLink = document.querySelector('a[href="jelovnik.html"]');
 const recipesLink = document.querySelector('a[href="recepti.html"]');
 
@@ -47,6 +48,14 @@ if (recipeToggle && recipeDetails) {
     const isOpen = recipeDetails.classList.toggle("show");
     recipeToggle.textContent = isOpen ? "Sakrij detalje" : "Prikazi detalje";
   });
+}
+
+if (formMessage) {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("success") === "1") {
+    formMessage.textContent = "Rezervacija je uspjesno poslana. Hvala!";
+    formMessage.classList.add("success");
+  }
 }
 
 if (reservationForm) {
