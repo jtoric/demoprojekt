@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konoba Maslina - Recepti</title>
+    <meta property="og:title" content="Konoba Maslina - Recepti" />
+    <meta
+      property="og:description"
+      content="Recept tjedna s detaljnim koracima i sastojcima."
+    />
+    <meta property="og:image" content="img/og-preview.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://demoprojektuwt.netlify.app/recepti.html" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3HSJLBQQE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag("js", new Date());
+      gtag("config", "G-C3HSJLBQQE");
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-shell">
+        <div class="brand">Konoba Maslina</div>
+        <div class="nav-links">
+          <a href="index.html">Naslovnica</a>
+          <a href="jelovnik.html">Jelovnik</a>
+          <a href="recepti.html">Recepti</a>
+          <a href="rezervacija.html">Rezervacija</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-hero reveal">
+        <h1 class="brand">Recept tjedna</h1>
+        <p class="subhead">Domaca pasta s crnim sipama i bademima.</p>
+      </section>
+
+      <section class="recipe-card">
+        <div class="recipe-panel">
+          <h3>Crni rizot s bademima</h3>
+          <p>
+            Tjestenina kuhana u temeljcu od ribe, s tintom i tostiranim bademima.
+          </p>
+          <button class="btn" data-toggle-recipe>Prikazi detalje</button>
+          <div class="toggle-area">
+            <p><strong>Sastojci:</strong> rizot, tinta sipe, bademi, bijelo vino, temeljac, cesnjak, maslinovo ulje.</p>
+            <p><strong>Koraci:</strong> tostiraj bademe, pripremi umak s tintom, sjedini s rizotom i zavrsi s maslinovim uljem.</p>
+            <p><strong>Vrijeme:</strong> 35 min | <strong>Tezina:</strong> srednje</p>
+          </div>
+        </div>
+        <div class="recipe-panel">
+          <img src="img/recipe-risotto.jpg" alt="Crni rizot" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Konoba Maslina | 2026 | Kolekcija recepata iz nase kuhinje.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

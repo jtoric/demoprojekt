@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konoba Maslina - Jelovnik</title>
+    <meta property="og:title" content="Konoba Maslina - Jelovnik" />
+    <meta
+      property="og:description"
+      content="Grid jelovnika s filtriranjem po kategoriji."
+    />
+    <meta property="og:image" content="img/og-preview.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://demoprojektuwt.netlify.app/jelovnik.html" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3HSJLBQQE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag("js", new Date());
+      gtag("config", "G-C3HSJLBQQE");
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-shell">
+        <div class="brand">Konoba Maslina</div>
+        <div class="nav-links">
+          <a href="index.html">Naslovnica</a>
+          <a href="jelovnik.html">Jelovnik</a>
+          <a href="recepti.html">Recepti</a>
+          <a href="rezervacija.html">Rezervacija</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-hero reveal">
+        <h1 class="brand">Jelovnik konobe</h1>
+        <p class="subhead">Filtriraj po kategoriji i odaberi svoj mediteranski favorit.</p>
+      </section>
+
+      <section style="margin-top: 48px;">
+        <div class="menu-filters">
+          <button class="filter-btn active" data-filter="all">Sve</button>
+          <button class="filter-btn" data-filter="predjelo">Predjela</button>
+          <button class="filter-btn" data-filter="glavno">Glavna jela</button>
+          <button class="filter-btn" data-filter="desert">Deserti</button>
+          <button class="filter-btn" data-filter="pice">Pica</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card" data-category="predjelo">
+            <img src="img/bruschetta.jpg" alt="Bruschetta" />
+            <div class="content">
+              <h3>Bruschetta s maslinama</h3>
+              <p>Domaci kruh, tapenada i cherry rajcice.</p>
+              <span>6 EUR</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="predjelo">
+            <img src="img/octopus-salad.jpg" alt="Salata od hobotnice" />
+            <div class="content">
+              <h3>Salata od hobotnice</h3>
+              <p>Marinirana s kaparima i citrusom.</p>
+              <span>11 EUR</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="glavno">
+            <img src="img/grilled-fish.jpg" alt="Grilana riba" />
+            <div class="content">
+              <h3>Grilana riba</h3>
+              <p>Ulov dana uz povrce sa zara.</p>
+              <span>18 EUR</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="glavno">
+            <img src="img/black-risotto.jpg" alt="Crni rizot" />
+            <div class="content">
+              <h3>Crni rizot</h3>
+              <p>Liganje, tinta i domaca tjestenina.</p>
+              <span>16 EUR</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="desert">
+            <img src="img/rosemary-cake.jpg" alt="Kolac od ruzmarina" />
+            <div class="content">
+              <h3>Kolac od ruzmarina</h3>
+              <p>Med, bademi i lagani citrusni preljev.</p>
+              <span>7 EUR</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="desert">
+            <img src="img/fig-tart.jpg" alt="Tart od smokava" />
+            <div class="content">
+              <h3>Tart od smokava</h3>
+              <p>Karamelizirane smokve i mascarpone.</p>
+              <span>8 EUR</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="pice">
+            <img src="img/house-wine.jpg" alt="Kuca vina" />
+            <div class="content">
+              <h3>Kuca vina</h3>
+              <p>Crveno ili bijelo, sezonirano u podrumu.</p>
+              <span>4 EUR</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="pice">
+            <img src="img/citrus-cocktail.jpg" alt="Citrusni koktel" />
+            <div class="content">
+              <h3>Citrusni koktel</h3>
+              <p>Limun, naranca, gin i timijan.</p>
+              <span>9 EUR</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Konoba Maslina | 2026 | Jelovnik je inspiriran Dalmacijom.</p>
+    </footer>
+
+  </body>
+</html>

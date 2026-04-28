@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konoba Maslina - Rezervacija</title>
+    <meta property="og:title" content="Konoba Maslina - Rezervacija" />
+    <meta
+      property="og:description"
+      content="Rezervacija stola uz brzu validaciju forme."
+    />
+    <meta property="og:image" content="img/og-preview.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://demoprojektuwt.netlify.app/rezervacija.html" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3HSJLBQQE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag("js", new Date());
+      gtag("config", "G-C3HSJLBQQE");
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-shell">
+        <div class="brand">Konoba Maslina</div>
+        <div class="nav-links">
+          <a href="index.html">Naslovnica</a>
+          <a href="jelovnik.html">Jelovnik</a>
+          <a href="recepti.html">Recepti</a>
+          <a href="rezervacija.html">Rezervacija</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-hero reveal">
+        <h1 class="brand">Rezerviraj stol</h1>
+        <p class="subhead">Popuni formu i potvrdit cemo termin u roku od 24 sata.</p>
+      </section>
+
+      <section class="form-shell">
+        <form
+          id="reservation-form"
+          name="reservation"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          novalidate
+        >
+          <input type="hidden" name="form-name" value="reservation" />
+          <p style="display: none;">
+            <label>
+              Ne ispunjavaj: <input name="bot-field" />
+            </label>
+          </p>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Ime i prezime</label>
+              <input id="name" name="name" type="text" placeholder="Ana Maric" />
+              <span id="name-error" class="error"></span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="ana@email.com" />
+              <span id="email-error" class="error"></span>
+            </div>
+            <div class="form-field">
+              <label for="guests">Broj gostiju</label>
+              <input id="guests" name="guests" type="number" min="1" max="12" value="2" />
+              <span id="guests-error" class="error"></span>
+            </div>
+            <div class="form-field">
+              <label for="date">Datum</label>
+              <input id="date" name="date" type="date" />
+              <span id="date-error" class="error"></span>
+            </div>
+            <div class="form-field">
+              <label for="time">Vrijeme</label>
+              <select id="time" name="time">
+                <option value="">Odaberi</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+              </select>
+              <span id="time-error" class="error"></span>
+            </div>
+            <div class="form-field">
+              <label for="notes">Napomena</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Posebne zelje"></textarea>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <button class="btn" type="submit">Posalji rezervaciju</button>
+          </div>
+          <p id="form-message" class="success" style="display: block; margin-top: 16px;"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Konoba Maslina | 2026 | Rezervacije: rezervacije@maslina.hr</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
